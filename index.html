@@ -18,15 +18,15 @@
 
     <script>
       var counter = (function(){
-      var cnt = 0;
+        var cnt = 0;
 
-      return function(){
-        return cnt += 1;
-      };
-    }());
-    $('.js-cal-count').on('click',function(){
-      $('.js-set-count').text(counter());
-    });
+        return function(){
+          return cnt += 1;
+        };
+      }());
+      $('.js-cal-count').on('click',function(){
+        $('.js-set-count').text(counter());
+      });
     </script>
   </body>
 </html>

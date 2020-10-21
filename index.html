@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>count(クロージャ)</title>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
+  </head>
+  <body style="text-align: center; margin: 100px;">
+
+    <h1 class="js-set-count">0</h1>
+    <button class="js-cal-count"
+            style="padding: 15px; background:#333;
+            border:none; color:white">カウント</button>
+
+
+    <script>
+      var counter = (function(){
+      var cnt = 0;
+
+      return function(){
+        return cnt += 1;
+      };
+    }());
+    $('.js-cal-count').on('click',function(){
+      $('.js-set-count').text(counter());
+    });
+    </script>
+  </body>
+</html>
